@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% extends 'testingapp/base.html' %}
+{% block body_block %}
+
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<div class="d-flex justify-content-center">
+    <div class="card text-white mb-3" style="background-color: #f48fb1; width: 18rem;">
+      <img src="{% static "images/mimipink2s.png" %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center">Mimi :)</h5>
+        <p class="card-text text-center">Here are pictures of Mimi. Click below ;)</p>
+        <a href="{% url 'testingapp:pictures' %}" style="background-color: pink;" class="btn btn-outline-danger text-white d-flex justify-content-center">Pictures</a>
+      </div>
+    </div>
+</div>
+  </body>
+</html>
+
+
+{% endblock %}
